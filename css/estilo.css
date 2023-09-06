@@ -1,0 +1,251 @@
+body {
+	background-color: #17181b;
+}
+h1 {
+	text-align: center;
+	color: #fff;
+}
+h4{
+	font-size: 16px;
+	font-weight: 700;
+	color: #FFF;
+}
+header{
+	padding: 20px 0 0 0;
+	background: #1d2124;
+	text-align: center;
+}
+@media (min-width: 750px) {
+	header {
+		text-align: left;
+	}
+}
+************************
+	
+.subTitulos{
+	font-family: 'Play', sans-serif;
+	font-size:4em;
+	color:rgb(160, 42, 6);
+	font-style:italic;
+    transform-origin: top left;
+	}
+
+
+nav{
+    width:90%;
+    margin:1em auto;
+    max-width:1000px;
+    background: rgb(8, 4, 68); 
+
+}
+
+nav ul {
+    overflow: hidden;
+	list-style: none;  
+    padding:  0 23.2em;
+	align-items: center;
+}
+
+nav ul li {
+    float:  left;
+}
+
+nav ul li a{
+    color: #FFF;
+    padding: 1.5em;
+    display: block; 
+    text-decoration: none;
+}
+
+nav ul li span{
+    margin-right: .5em;   
+}
+
+nav ul li a:hover{
+    background:  #1c212c;   
+    border:double;
+}
+
+
+***********************************************
+
+.borrar-product {
+	background-color: #00bbbb;
+	border-radius:50%;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: rgb(71, 71, 71);
+	font-weight: bold; 
+}
+
+ul {
+	list-style: none;
+}
+
+.hero {
+	background-image: url(../img/hero.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 551px;
+}
+.encabezado{
+	margin: 30px 0;
+	color: #fff;
+}
+.submenu{
+	position: relative;
+}
+.submenu #carrito{
+	display: none;
+}
+.submenu:hover #carrito {
+	display: block;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	z-index: 1;
+	background:#17181b;
+	padding: 20px;
+}
+.vacio {
+	padding: 10px;
+	background-color: #0041aa;
+	text-align: center;
+	border-radius: 10px;
+	color: rgb(255,255,255);
+}
+.button {
+	background-color: #00bbbb;
+	color: rgb(255,255,255);
+}
+.contenido-hero{
+	margin-top: 80px;
+	color: #fff;
+}
+.contenido-hero form {
+	position: relative;
+	margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+	height: 50px;
+	margin-bottom: 0;
+}
+.contenido-hero form .submit-buscador {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	height: 100%;
+	padding: 0;
+	display: block;
+	text-indent: -9999px;
+	width: 50px;
+	background-image: url(../img/lupa.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	border:none;
+}
+
+
+#lista-products .row {
+	margin-bottom: 20px;
+}
+.agregar-carrito{
+	margin:10px 0;
+}
+.card {
+	text-align: center;
+	border: 1px solid rgba(255,255,255,0.05);
+	background:#1d2124;
+}
+@media (min-width: 550px){
+	.card {
+		text-align: left;
+	}
+}
+.info-card{
+	padding: 10px 20px;
+	color: #ffff;
+}
+.info.card p,
+.card h4 {
+	margin-bottom: 5px;
+}
+.info-card .precio {
+	text-decoration: line-through;
+	font-size: 18px;
+	margin-top: 10px;
+
+}
+.info-card .precio span {
+	font-weight: 700;
+	font-size: 22px;
+}
+.footer {
+	margin-top: 40px;
+	padding-top: 40px;
+	color: #FFF;
+	background: #373d41;
+}
+.footer .menu a {
+	display: block;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: #FFF;
+}
+
+
+.copy{
+	text-align: center;
+	margin: auto;
+	margin-top: 15px;
+	
+}
+
+.footer [class*="icon-"]{
+	color: #FFF;
+	text-decoration: none;
+
+}
+
+.footer [class*="icon-"]::before{
+	position: relative;
+	top: 3px;
+	right: 5px;
+
+}
+
+.menu{
+	background: #373d41;
+}
+
+.Etiquetas{
+
+color: #FFF;
+}
+
+.login{
+	color: black;
+	
+}
+
+.registro{
+	background: rgb(44, 41, 44);
+}
+
+nav ul{
+    display: flex;
+    align-content: center;
+}
+
+nav ul li{
+    border-right: solid .1rem rgba(61, 61, 61, 0.41);
+}
+.navimg{
+	position: relative;
+
+	left: 450px;
+}
+
+
