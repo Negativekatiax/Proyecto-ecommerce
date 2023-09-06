@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title></title> 
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	<link rel="stylesheet" href="estilos.css">
+	
+
+</head>  
+<body>
+
+    <form class="formulario" method="post">
+    
+   <h1>Paso final!</h1>
+	<p class="lead"> Estas a punto de pagar la cantidad de:
+		<h4> Total:300$ </h4>
+		<div id="paypal-button-container"></div>
+	</p>
+    <!-- Remplazar "test" con tu propio ID de cliente de la aplicaci�n de cuenta sandbox  -->
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+    <!-- Configure un elemento contenedor para el bot�n -->
+    <div id="paypal-button-container"></div>
+    <script>
+      paypal.Buttons({
+        // Configura la transacci�n cuando se hace clic en un bot�n de pago
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '300.00' // Tambi�n puede hacer referencia a una variable o funci�n 
+              }
+            }]
+          });
+        },
+        // Finalizar la transacci�n despu�s de la aprobaci�n del pagador
+        onApprove: (data, actions) => {
+          return actions.order.capture().then(function(orderData) {
+            // �Captura exitosa! Para prop�sitos de desarrollo/demostraci�n:
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+            const transaction = orderData.purchase_units[0].payments.captures[0];
+            alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+            // Cuando est� listo para comenzar, elimine la alerta y muestre un mensaje de �xito dentro de esta p�gina. Por ejemplo:
+            // const element = document.getElementById('paypal-button-container');
+            // element.innerHTML = '<h3>�Gracias por su pago!</h3>';
+            // O vaya a otra URL: actions.redirect('thank_you.html');
+          });
+        }
+      }).render('#paypal-button-container');
+    </script>
+
+    </form>
+</body>
+</html>
