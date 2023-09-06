@@ -1,6 +1,8 @@
-# Mi_portafolio
+# Mi_pagina ecommerce 
 
 Pagina ecommerce
+
+Katia Denisse Muñoz Escobedo 
 
 Lenguajes Utilizados:
 JavaScript, HTML, CSS, PHP
